@@ -1,7 +1,7 @@
 <?php
 
 // Define the API URL
-$url = 'https://www.bcex.kr/api/v2/trade/coingecko/tickers';
+$url = 'https://www.example.com/api/v2/trade/coingecko/tickers';
 
 // Make the API request and retrieve the response
 $apiResponse = file_get_contents($url);
