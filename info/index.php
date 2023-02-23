@@ -22,8 +22,9 @@ $exchange = array(
     )
 );
 
-// Encode the exchange object as JSON with pretty print
-$json = json_encode($exchange, JSON_PRETTY_PRINT);
+// Encode the exchange object as JSON without escaping forward slashes
+$json = json_encode($exchange, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
 
 // Send the JSON response
 echo $json;
