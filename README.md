@@ -4,4 +4,8 @@ This Fetch API source code is integrated with OpenDAX 2.6.6. However, you can mo
 
 # Nomics
 
-This will help you to list & track on Nomics.
+This will help you list and track your Exchange on Nomics.
+
+# Contact
+
+Please feel free to contact me if you have any questions at @habibalejalil
