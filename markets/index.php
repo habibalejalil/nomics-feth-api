@@ -1,5 +1,5 @@
 <?php
-$url = 'https://www.adonis.exchange/api/v2/trade/public/markets';
+$url = 'https://www.example.com/api/v2/trade/public/markets';
 $apiResponse = file_get_contents($url);
 $markets = json_decode($apiResponse, true);
 
