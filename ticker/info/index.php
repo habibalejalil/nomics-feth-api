@@ -7,11 +7,11 @@ header("Content-Type: application/json; charset=UTF-8");
 // Define the exchange object
 $exchange = array(
     "name" => "Example Exchange",
-    "description" => "Example Exchange is a Centralized Exchange",
+    "description" => "Example Exchange is a Centralized Exchange.",
     "location" => "Turkey",
     "logo" => "https://www.example.exchange/static/media/icon-gif.7121d96a.png",
     "website" => "https://example.exchange",
-    "twitter" => "https://twitter.com/example",
+    "twitter" => "https://twitter.com/Example",
     "version" => "2.7.0",
     "capability" => array(
         "markets" => true,

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nomics API documents</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="https://avatars.githubusercontent.com/u/32463793?s=280&v=4" alt="Logo">
+      <span class="logo-text">Nomics API documents</span>
+    </header>
+    <script>
+      window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+      }, false);
+    </script>
+    
+<br>
+    <p>This landing page provides documentation of example Exchange APIs for Nomics. Example Exchange provides a number of APIs for listing exchange <br>spot markets, trades, and orders. Here are some examples:</p><br><br>
+
+    <h2>Select an API endpoint:</h2>
+   
+    <label for="url-select" style="padding-left: 10px;"> </label>
+
+<select id="url-select">
+  <option value="https://api.example.exchange/nomics/ticker/">Ticker</option>
+  <option value="https://api.example.exchange/nomics/info/">Info</option>
+  <option value="https://api.example.exchange/nomics/markets/">Markets</option>
+  <option value="https://api.example.exchange/nomics/trades/?market=BTC_USDT">BTC_USDT Trades</option>
+  <option value="https://api.example.exchange/nomics/orders/snapshot/?market=BTC_USDT&depth=2">BTC_USDT Orders</option>
+</select>
+
+<p id="url-output"></p>
+
+<script>
+  const urlSelect = document.getElementById('url-select');
+  const urlOutput = document.getElementById('url-output');
+
+  urlSelect.addEventListener('change', () => {
+    const selectedUrl = urlSelect.value;
+    urlOutput.textContent = selectedUrl;
+  });
+</script>
+    
+
+    <div class="result-container">
+      <button onclick="fetchAPI()">Execute</button>
+      <button class="clear" onclick="clearResult()">Clear</button>
+      <div id="result" class="result"></div>
+    </div>
+    
+    <script>
+
+ //fetch api     
+ function fetchAPI() {
+  const urlSelect = document.getElementById('url-select');
+  const selectedUrl = urlSelect.value;
+
+  fetch(selectedUrl)
+    .then(response => response.json())
+    .then(data => {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '';
+
+      const pre = document.createElement('pre');
+      pre.style.color = 'black';
+      pre.style.backgroundColor = 'transparent';
+      pre.textContent = JSON.stringify(data, null, 2);
+
+      resultDiv.appendChild(pre);
+    })
+    .catch(error => {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `Error: ${error}`;
+    });
+}
+//end fetch
+  //clear fetch
+  function clearResult() {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+  }
+  
+    </script>
+
+<footer>
+  <div>
+    <p class="made-by"><a href="https://github.com/habibalejalil/nomics-feth-api" target="_blank">Made with ❤️ 2023</a></p>
+    <div class="social-media">
+      <a href="#"><img src="https://toppng.com/uploads/thumbnail/circle-fb-icon-white-11563092286dc7puxbp4k.png" alt="Facebook"></a>
+      <a href="#"><img src="https://icon-library.com/images/instagram-icon-png-white/instagram-icon-png-white-2.jpg" alt="Instagram"></a>
+      <a href="#"><img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="Twitter"></a>
+    </div>
+  </div>
+</footer>
+<style>
+
+.made-by {
+    margin: 0;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .made-by a {
+    display: inline;
+  }
+
+</style>
+
+      </body>
+    </html>

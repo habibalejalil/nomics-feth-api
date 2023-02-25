@@ -1,0 +1,168 @@
+/* Global styles */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Set padding to the height of the footer */
+  background-color: #ac04fc;
+  color: white;
+  font-size: 16px;
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+  margin-top: 20px;
+}
+p {
+  margin-left: 20px;
+}
+h2 {
+  margin-left: 20px;
+}
+/* Header styles */
+header {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.logo-text {
+  color: white;
+  margin-top: 5px;
+  line-height: 30px;
+}
+#url-select {
+  margin-left: 10px;
+}
+
+#result {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* Result container styles */
+.result-container {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 430px;
+}
+
+.result-container h2,
+.result-container p {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.result {
+  background-color: white;
+  color: black;
+  font-family: monospace;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+/* Button styles */
+button {
+  background-color: #ac04fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+button.clear {
+  background-color: #ac04fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* Footer styles */
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto; /* Center the footer horizontally */
+}
+
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer .made-by {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+.made-by {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.made-by a {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.made-by a:hover {
+  color: #ac04fc;
+}
+

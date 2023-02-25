@@ -18,7 +18,5 @@ foreach ($markets as $market) {
   array_push($result, $entry);
 }
 $json = json_encode($result, JSON_PRETTY_PRINT);
-
-header('Content-Type: application/json');
-echo $json;
+echo nl2br($json);
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 // Define the API URL
-$url = 'https://www.example.com/api/v2/trade/coingecko/tickers';
+$url = 'https://www.example.exchange/api/v2/trade/coingecko/tickers';
 
 // Make the API request and retrieve the response
 $apiResponse = file_get_contents($url);
@@ -36,7 +36,10 @@ foreach ($responseArray as $ticker) {
 // Encode the converted data as a JSON string with JSON_PRETTY_PRINT
 $convertedDataJson = json_encode($convertedData, JSON_PRETTY_PRINT);
 
-// Print the converted data with each array in a new line
-echo nl2br($convertedDataJson);
+// Set the response content type to JSON
+header('Content-Type: application/json');
+
+// Print the converted data
+echo $convertedDataJson;
 
 ?>
